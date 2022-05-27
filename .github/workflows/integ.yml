@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ release-1.14 ]
+    branches: [ release-1.14-integ ]
   pull_request:
-    branches: [ release-1.14 ]
+    branches: [ release-1.14-integ ]
 
 jobs:
   build:
