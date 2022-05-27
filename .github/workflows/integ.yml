@@ -26,4 +26,4 @@ jobs:
 
     - name:
       run:
-         DOCKER_RUN_OPTIONS="-e HUB=localhost:5000 -e TAG=istio-testing" ./prow/integ-suite-kind.sh test.integration.pilot.kube
+         DOCKER_RUN_OPTIONS="-e HUB=localhost:5000 -e TAG=istio-testing -e PULL_POLICY=IfNotPresent" ./prow/integ-suite-kind.sh test.integration.pilot.kube
