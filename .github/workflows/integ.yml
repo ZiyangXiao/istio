@@ -34,7 +34,7 @@ jobs:
         echo "aaa" > test.txt
     - name: Grep 
       run: |
-        cat test.txt| grep b
+        cat test.txt| grep aaa
 
         # - name:
         # run:
