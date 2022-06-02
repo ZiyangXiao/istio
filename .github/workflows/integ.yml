@@ -30,7 +30,7 @@ jobs:
 
     - name: Test virtualbox
       run: |
-        systemctl status virtualbox.service
+        virtualbox
 
         # - name:
         # run:
