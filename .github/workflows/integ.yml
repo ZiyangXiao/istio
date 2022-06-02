@@ -30,7 +30,11 @@ jobs:
 
     - name: Test virtualbox
       run: |
-        virtualbox
+        touch test.txt
+        echo "aaa" > test.txt
+    - name: Grep 
+      run: |
+        cat test.txt| grep b
 
         # - name:
         # run:
