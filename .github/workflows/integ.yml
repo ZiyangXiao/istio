@@ -28,6 +28,10 @@ jobs:
         version: v0.12.0     
         skipClusterCreation: true 
 
-    - name:
-      run:
-         DOCKER_RUN_OPTIONS="-e HUB=localhost:5000 -e TAG=istio-testing -e PULL_POLICY=IfNotPresent" ./prow/integ-suite-kind.sh test.integration.pilot.kube
+    - name: Test virtualbox
+      run: |
+        systemctl status virtualbox.service
+
+        # - name:
+        # run:
+        #  DOCKER_RUN_OPTIONS="-e HUB=localhost:5000 -e TAG=istio-testing -e PULL_POLICY=IfNotPresent" ./prow/integ-suite-kind.sh test.integration.pilot.kube
