@@ -19,7 +19,7 @@ jobs:
 
     - name: check env
       run: |
-        env
+        env |grep proxy
     
     - name: Set up Go
       uses: actions/setup-go@v2
