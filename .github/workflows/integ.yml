@@ -19,7 +19,7 @@ jobs:
 
     - name: check env
       run: |
-        env |grep proxy
+        cat /etc/resolv.conf
     
     - name: Set up Go
       uses: actions/setup-go@v2
