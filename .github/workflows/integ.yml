@@ -16,6 +16,7 @@ jobs:
     - name: Check kubectl
       run: |
         kubectl
+        kind version
 
     - name: check env
       run: |
@@ -32,14 +33,14 @@ jobs:
         version: v0.12.0     
         skipClusterCreation: true 
 
-    - name: Test virtualbox
-      run: |
-        touch test.txt
-        echo "aaa" > test.txt
+    #- name: Test virtualbox
+    #  run: |
+    #    touch test.txt
+    #   echo "aaa" > test.txt
     # - name: Grep 
     #   run: |
     #     cat test.txt| grep aaa
 
-        # - name:
-        # run:
-        #  DOCKER_RUN_OPTIONS="-e HUB=localhost:5000 -e TAG=istio-testing -e PULL_POLICY=IfNotPresent" ./prow/integ-suite-kind.sh test.integration.pilot.kube
+    - name: Integ Test 
+      run: |
+         BUILD_WITH_CONTAINER=0 ./prow/integ-suite-kind.sh test.integration.pilot.kube
