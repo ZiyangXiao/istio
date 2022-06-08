@@ -35,8 +35,11 @@ jobs:
        echo "aaa" > test.txt
     - name: Grep 
       run: |
-        cat test.txt| grep aaa
-        cat test.txt| grep bbb
+        docker run hello-world:latest
+        # cat test.txt| grep \
+        # aaa
+        # cat test.txt| grep \
+        # bbb
 
     - name: grep after
       run: |
