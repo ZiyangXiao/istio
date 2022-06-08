@@ -43,7 +43,7 @@ jobs:
     - name: tty test 
       run: |
         test -t 1 && USE_TTY="-it"
-        docker run ${USE_TTY} hello-world:latest sh |grep Docker
+        docker run ${USE_TTY} hello-world:latest |grep Docker
     - name: grep after
       run: |
         cat test.txt
