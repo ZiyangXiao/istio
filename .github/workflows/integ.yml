@@ -40,7 +40,10 @@ jobs:
         # aaa
         # cat test.txt| grep \
         # bbb
-
+    - name: tty test 
+      run: |
+        test -t 1 && USE_TTY="-it"
+        docker run ${USE_TTY} hello-world:latest
     - name: grep after
       run: |
         cat test.txt
