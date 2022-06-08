@@ -17,10 +17,11 @@ jobs:
       run: |
         kubectl
         kind version
+        docker version
 
-    - name: check env
-      run: |
-        cat /etc/resolv.conf
+    # - name: check env
+    #   run: |
+    #     cat /etc/resolv.conf
     
     - name: Set up Go
       uses: actions/setup-go@v2
@@ -43,8 +44,9 @@ jobs:
       echo "aaa" > test.txt
     - name: Grep 
       run: |
-        cat test.txt| grep aaa
         cat test.txt| grep bbb
+        cat test.txt| grep aaa
+
 
     # - name: Integ Test 
     #   run: |
