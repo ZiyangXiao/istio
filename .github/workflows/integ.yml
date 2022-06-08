@@ -47,6 +47,10 @@ jobs:
         cat test.txt| grep bbb
         cat test.txt| grep aaa
 
+    - name: grep after
+      run: |
+        cat test.txt
+
 
     # - name: Integ Test 
     #   run: |
