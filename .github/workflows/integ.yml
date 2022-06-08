@@ -37,14 +37,15 @@ jobs:
     #    version: v0.12.0     
     #    skipClusterCreation: true 
 
-    #- name: Test virtualbox
-    #  run: |
-    #    touch test.txt
-    #   echo "aaa" > test.txt
-    # - name: Grep 
-    #   run: |
-    #     cat test.txt| grep aaa
-
-    - name: Integ Test 
+    - name: Test virtualbox
+     run: |
+       touch test.txt
+      echo "aaa" > test.txt
+    - name: Grep 
       run: |
-         BUILD_WITH_CONTAINER=0 ./prow/integ-suite-kind.sh test.integration.pilot.kube
+        cat test.txt| grep aaa
+        cat test.txt| grep bbb
+
+    # - name: Integ Test 
+    #   run: |
+    #      BUILD_WITH_CONTAINER=0 ./prow/integ-suite-kind.sh test.integration.pilot.kube
